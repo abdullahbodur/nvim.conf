@@ -148,7 +148,7 @@ vim.opt.splitbelow = true
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
-vim.opt.list = false  -- Disable showing whitespace characters
+vim.opt.list = false -- Disable showing whitespace characters
 -- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
@@ -182,12 +182,12 @@ vim.opt.display = 'lastline'
 vim.opt.virtualedit = 'onemore'
 
 -- Indent configuration
-vim.opt.tabstop = 2        -- Number of spaces a tab counts for
-vim.opt.shiftwidth = 2      -- Number of spaces to use for each step of (auto)indent
-vim.opt.softtabstop = 2    -- Number of spaces that a tab counts for while performing editing operations
-vim.opt.expandtab = true    -- Use spaces instead of tabs
-vim.opt.smartindent = true  -- Smart autoindenting when starting a new line
-vim.opt.autoindent = true   -- Copy indent from current line when starting a new line
+vim.opt.tabstop = 2 -- Number of spaces a tab counts for
+vim.opt.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
+vim.opt.softtabstop = 2 -- Number of spaces that a tab counts for while performing editing operations
+vim.opt.expandtab = true -- Use spaces instead of tabs
+vim.opt.smartindent = true -- Smart autoindenting when starting a new line
+vim.opt.autoindent = true -- Copy indent from current line when starting a new line
 
 -- Filetype-specific indent settings
 vim.api.nvim_create_autocmd('FileType', {
@@ -205,7 +205,7 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.tabstop = 4
     vim.opt_local.shiftwidth = 4
     vim.opt_local.softtabstop = 4
-    vim.opt_local.expandtab = false  -- Use tabs for Go and Rust
+    vim.opt_local.expandtab = false -- Use tabs for Go and Rust
   end,
 })
 
@@ -251,6 +251,10 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- vertical and horizontal split keymaps
+vim.keymap.set('n', '<leader>|', '<C-w>v', { desc = 'Split Window Vertically' })
+vim.keymap.set('n', '<leader>-', '<C-w>s', { desc = 'Split Window Horizontally' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -353,7 +357,7 @@ require('lazy').setup({
   require 'plugins.lazydev',
   -- nvim bar plugin
   require 'plugins.lualine',
- 
+
   require 'plugins.java',
   require 'plugins.conform',
 
@@ -364,6 +368,8 @@ require('lazy').setup({
   require 'plugins.todo-comments',
   require 'plugins.mini',
   require 'plugins.treesitter',
+  require 'plugins.smear-cursor',
+  require 'plugins.snacks',
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
