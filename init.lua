@@ -104,6 +104,8 @@ vim.g.have_nerd_font = false
 --  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
 
+vim.opt.termguicolors = true
+
 -- Ensure line numbers are always visible
 vim.opt.numberwidth = 4 -- Width of number column
 vim.opt.signcolumn = 'yes' -- Always show sign column
@@ -370,6 +372,8 @@ require('lazy').setup({
   require 'plugins.treesitter',
   require 'plugins.smear-cursor',
   require 'plugins.snacks',
+  require 'plugins.copilot',
+  require 'plugins.avante',
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
