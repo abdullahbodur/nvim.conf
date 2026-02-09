@@ -41,5 +41,12 @@ return {
       position = 'right',
       width = 30,
     },
+    -- Leave ]] and [[ to Snacks (Next/Prev Reference); avoid binding them in avante
+    mappings = {
+      jump = {
+        next = '',
+        prev = '',
+      },
+    },
   },
 }
